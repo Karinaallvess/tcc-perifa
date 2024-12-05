@@ -1,0 +1,144 @@
+/* Corpo da página */
+body {
+    background: linear-gradient(to top, #d8e3e6, #ffffff); /* Degradê de azul claro para azul escuro */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    flex-direction: column; /* Organiza os elementos na vertical */
+  }
+  
+  /* Container para alinhar os formulários e avaliação um abaixo do outro */
+.containerform {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center;
+    gap: 30px; /* Espaço entre os elementos */
+    width: 100%;
+    max-width: 500px; /* Limita a largura para que o conteúdo não fique muito largo */
+}
+
+  
+  /* Estilo do formulário */
+  .formulario {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .formulario h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .formulario label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  .formulario input[type="text"],
+  .formulario input[type="email"],
+  .formulario input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formulario input:focus {
+    border-color: #ffffff;
+    outline: none;
+  }
+  
+  .formulario button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario button:hover {
+    background-color: #ffffff;
+  }
+  
+  /* Estilo da avaliação */
+  .avaliacao {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .estrelinhas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    font-size: 30px;
+    color: #d3d3d3;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: gold;
+  }
+  
+  input[type="radio"]:checked ~ label:hover,
+  label:hover {
+    color: gold;
+  }
+  
+  .resultado {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .formulario {
+      padding: 20px;
+    }
+  
+    .formulario h2 {
+      font-size: 20px;
+    }
+  
+    .formulario input[type="text"],
+    .formulario input[type="email"],
+    .formulario input[type="password"],
+    .formulario button {
+      font-size: 16px;
+    }
+    
+    .estrelinhas label {
+      font-size: 25px;
+    }
+  }
